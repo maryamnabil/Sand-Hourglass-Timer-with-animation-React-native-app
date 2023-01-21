@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+  <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  
+  
+    
+    <title>CodePen - Interactive SVG Hour Glass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet" type="text/css">
+    
+    
+    
+  <style>
+  body{
+    background-color:#4873A9;
+    overflow:hidden;
+  }
+  body, html {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+  
+  
+  
+  svg{
+    width:100%;
+    height: 100%;
+  }
+  
+  text, tspan{
+    font-family: 'Slabo 27px', serif;
+    font-size:27px;
+    fill:#ededed;
+  }
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  
+  
+  </head>
+  <body translate="no">
+    <svg class="hourglassSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+  <defs>
+    <circle id="grain" cx="0" cy="0" r="1" fill="#F7E0B7"></circle>
+  <clipPath id="topMask">
+  <path class="topMask" fill="#6D00BF" d="M316.7,266.3c-0.2,0.1-3.7,1.5-4.8,2.5c0,0,0,0,0,0.1c-1.8,1.5-3.2,4.5-3.2,7.1l-1.6,0
+    l-1.4,0c0-2.6-1.4-5.6-3.2-7.1c0,0,0-0.1,0-0.1c-1.1-1-4.6-2.5-4.8-2.5C237.1,249.5,195,174,188,91h119h119.3
+    C419.3,174,377.2,249.5,316.7,266.3z"></path>
+  
+    </clipPath>
+    
+    <clipPath id="botMask" data-svg-origin="188 274" style="transform: matrix(1, 0, 0, 1, -1, 0);">
+  <path class="botMask" fill="#6D00BF" d="M316.7,283.7c-0.2-0.1-3.7-1.5-4.8-2.5c0,0,0,0,0-0.1c-1.8-1.5-3.2-4.5-3.2-7.1l-1.6,0
+    l-1.4,0c0,2.6-1.4,5.6-3.2,7.1c0,0,0,0.1,0,0.1c-1.1,1-4.6,2.5-4.8,2.5C237.1,300.5,195,376,188,459h119h119.3
+    C419.3,376,377.2,300.5,316.7,283.7z"></path>
+        
+    </clipPath>
+  </defs>
+  
+    <g class="allGrouped" data-svg-origin="306.5 275" style="transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+    <g clip-path="url(#topMask)">
+    <rect class="topSand" x="0" y="279" fill="#F7E0B7" width="600" height="185"></rect>
+    </g>
+    <g clip-path="url(#botMask)">
+  <ellipse class="bottomSand" fill="#F7E0B7" cx="307.5" cy="415" rx="247.5" ry="120" data-svg-origin="307.5 580" style="transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"></ellipse>    
+    </g>
+  <rect class="top" x="175" y="70" fill="#F1AF31" width="263" height="21"></rect>
+  <line class="drip" fill="none" stroke="#F7E0B7" stroke-width="2" stroke-miterlimit="10" x1="307" y1="275" x2="307" y2="460" style="stroke-dashoffset: -186; stroke-dasharray: 1e-05px, 196px;"></line>  
+  <path class="body" opacity="0.23" fill="#FFFFFF" d="M432.2,459H180.8c4.3-90,49.8-165,108.7-175.2c6.1-1,10.3-5.2,10.3-8.8
+    c0-3-4.2-7.8-10.3-8.8C230.6,256,185.2,180.5,180.8,91h251.3c-4.3,89.6-49.7,166.3-108.8,175.2c-6,0.9-10.2,6.1-10.2,8.8
+    c0,2.7,4.3,7.9,10.2,8.8C382.5,292.7,427.8,369,432.2,459z"></path>
+  
+    
+  <path class="topShadow" fill="#121212" opacity="0.12" d="M432.5,91h-252c0.3,4.1,0.8,8.8,1.4,14h249.3C432,98.3,432.2,95,432.5,91z"></path>
+  <path class="botShadow" fill="#121212" opacity="0" d="M432.5,459h-252c0.3-4.1,0.8-8.8,1.4-14h249.3C432,451.7,432.2,455,432.5,459z"></path>
+  
+  <path class="rightShine" opacity="0.10" fill="#FFFFFF" d="M316.6,283.8c-5.2-1.2-8-6.1-8-8.8c0-2.7,2.8-7.5,8-8.8
+    c58.6-14,105.6-87,106.5-175.2h-22.8c-3.6,85.6-38.3,168.8-102.8,177.2c0,0,8,0.7,8,6.8c0,6.2-8,6.8-8,6.8
+    c64.5,8.3,99.2,91.6,102.8,177.2h22.8C422.3,370.8,375.3,297.8,316.6,283.8z"></path>
+  <path class="leftShine" opacity="0.28" fill="#FFFFFF" d="M297,283.8c5.2-1.2,8-6.1,8-8.8c0-2.7-2.8-7.5-8-8.8
+    c-58.6-14-105.6-87-106.5-175.2h22.8c3.6,85.6,38.3,168.8,102.8,177.2c0,0-8,0.7-8,6.8c0,6.2,8,6.8,8,6.8
+    c-64.5,8.3-99.2,91.6-102.8,177.2h-22.8C191.4,370.8,238.4,297.8,297,283.8z"></path>
+  <g clip-path="url(#botMask)">  
+  <g class="grainGroup" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 307, 296);">  
+   
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 7.89303, -2.79996); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 7.50058, -19.957); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, -16.8044, -3.35062); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 22.9523, 3.07097); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 2.80619, -0.568499); opacity: 0;"></use>  
+  <use xlink:href="#grain" x="0" y="0" data-svg-origin="-1 -1" style="transform: matrix(1, 0, 0, 1, 2.0717, -1.92126); opacity: 0;"></use>  
+    </g>    
+    </g>
+  <rect class="bottom" x="175" y="459" fill="#F1AF31" width="263" height="21"></rect>
+    </g>
+    <circle class="circleDragger" cx="300" cy="300" r="300" opacity="0" data-svg-origin="300 300" style="transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); user-select: none; touch-action: none;"></circle>  
+  
+  <g class="dragRotate" opacity="0" style="opacity: 0.8;">
+    <path fill="#FFFFFF" d="M503,101c4.7,0,9.4,1.7,13.2,5.1c8.1,7.3,8.7,19.8,1.4,27.9c-3.1,3.5-7.2,5.6-11.5,6.2l0.3-13
+      l-20.1,16.6l19.4,17.5l0.3-12c6.8-0.7,13.4-3.8,18.4-9.3c10.7-11.8,9.7-30-2.1-40.6c-5.7-5.2-13-7.6-20.1-7.4"></path>
+    <text x="400" y="200"><tspan dx="40">Spin round</tspan><tspan dx="-128" dy="30">to start again</tspan></text>
+  </g>
+  </svg>
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+  <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ThrowPropsPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/utils/Draggable.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Physics2DPlugin.min.js"></script>
+        <script id="rendered-js">
+  var xmlns = "http://www.w3.org/2000/svg",select = function (s) {
+    return document.querySelector(s);
+  },selectAll = function (s) {
+    return document.querySelectorAll(s);
+  },hourglassSVG = select('.hourglassSVG'),topSand = select('.topSand'),bottomSand = select('.bottomSand'),drip = select('.drip'),allGrouped = select('.allGrouped'),leftShine = select('.leftShine'),rightShine = select('.rightShine'),topShadow = select('.topShadow'),botShadow = select('.botShadow'),circleDragger = select('.circleDragger'),allGrains = selectAll('.grainGroup use'),
+  grainGroup = select('.grainGroup'),dragRotate = select('.dragRotate'),grainIsPaused = false;
+  
+  var sandTime = 8;
+  var timeLeft = 0;
+  var playhead = 0;
+  //center the container cos it's pretty an' that
+  
+  
+  TweenMax.set(botMask, {
+    x: '-=1' });
+  
+  TweenMax.set(allGrouped, {
+    svgOrigin: '306.5 275' });
+  
+  TweenMax.set(circleDragger, {
+    transformOrigin: '50% 50%' });
+  
+  TweenMax.set(drip, {
+    drawSVG: '0% 0%' });
+  
+  
+  var grainTl = new TimelineMax();
+  
+  var tl = new TimelineMax({ repeat: 0, onComplete: pauseGrains });
+  tl.to(drip, 1, {
+    drawSVG: '100% 0%',
+    ease: Expo.easeIn }).
+  
+  addCallback(createGrains).
+  to(topSand, sandTime, {
+    attr: {
+      y: '+=189' },
+  
+    ease: Linear.easeNone }).
+  
+  to(bottomSand, sandTime, {
+    attr: {
+      cy: '-=165',
+      rx: '+=200' },
+  
+    transformOrigin: '50% 50%',
+    ease: Linear.easeNone },
+  '-=' + sandTime).
+  fromTo(grainGroup, sandTime, {
+    x: 307,
+    y: 465 },
+  {
+    y: 296,
+    ease: Linear.easeNone },
+  '-=' + sandTime).
+  addCallback(pauseGrains).
+  to(drip, 1, {
+    drawSVG: '100% 100%',
+    ease: Linear.easeNone }).
+  
+  addCallback(setDragger, '+=0').
+  
+  to(leftShine, 1, {
+    alpha: 0.1,
+    ease: Linear.easeNone }).
+  
+  to(rightShine, 1, {
+    alpha: 0.28,
+    ease: Linear.easeNone },
+  '-=1').
+  
+  to(topShadow, 1, {
+    alpha: 0,
+    ease: Linear.easeNone },
+  '-=1').
+  to(botShadow, 1, {
+    alpha: 0.12,
+    ease: Linear.easeNone },
+  '-=1').
+  
+  to(bottomSand, 1, {
+    attr: {
+      cy: '-=40' },
+  
+    ease: Linear.easeNone },
+  '-=1');
+  
+  
+  var myDraggable = Draggable.create(circleDragger, {
+    type: 'rotation',
+    onDrag: onDrag,
+    throwProps: true,
+    onThrowUpdate: onDrag,
+    snap: [180],
+    minDuration: 2,
+    onDragStart: removeInfo,
+    //bounds:{minRotation:0, maxRotation:180},
+    onComplete: reset,
+    onPress: onPress,
+    onThrowComplete: reset,
+    overshootTolerance: 0 });
+  
+  myDraggable[0].disable();
+  
+  function onPress() {
+    playhead = tl.time();
+  }
+  
+  function onDrag() {
+  
+    TweenMax.set(allGrouped, {
+      rotation: circleDragger._gsTransform.rotation });
+  
+  
+    timeLeft = tl.duration() - playhead;
+    var percent = circleDragger._gsTransform.rotation / 180 * timeLeft;
+  
+    tl.time(playhead + percent);
+  }
+  
+  function setDragger() {
+  
+    myDraggable[0].enable();
+    tl.pause();
+  
+    if (dragRotate !== null) {
+      TweenMax.to(dragRotate, 1, {
+        alpha: 0.8 });
+  
+    }
+  
+    // pauseGrains();
+  
+    //if you want something to happen when the sand has finished do it here
+    //doFinished();
+  
+  }
+  
+  function removeInfo() {
+  
+    if (dragRotate !== null) {
+  
+      TweenMax.to(dragRotate, 0.3, {
+        alpha: 0,
+        onComplete: function () {
+          hourglassSVG.removeChild(dragRotate);
+          dragRotate = null;
+        } });
+  
+    }
+  }
+  
+  function reset() {
+  
+    TweenMax.set([circleDragger, allGrouped], {
+      rotation: 0 });
+  
+    myDraggable[0].disable();
+    tl.play(0);
+  
+    grainIsPaused = false;
+    restartGrains();
+  }
+  
+  function doFinished() {
+  
+    alert('all done!');
+  }
+  
+  function createGrainAnim(el, id) {
+    if (grainIsPaused) {
+      return;
+    }
+    var angle = randomBetween(-180, 0);
+    var vel = randomBetween(10, 50);
+  
+    TweenMax.set(el, {
+      x: 0,
+      y: 0,
+      attr: {
+        x: 0 } });
+  
+  
+  
+    el.grainId = id;
+    //
+    var t = TweenMax.to(el, randomBetween(1, 3) / 10, {
+      physics2D: {
+        velocity: 180,
+        angle: angle,
+        //acceleration:1000, 
+        gravity: 620,
+        accelerationAngle: 0 },
+  
+      //repeat:-1
+      onComplete: createGrainAnim,
+      onCompleteParams: [el, el.grainId] });
+  
+  
+    //grainTl.add(t, (i+1)/100)
+  
+  
+  }
+  
+  function createGrains() {
+    for (var i = 0; i < allGrains.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+      createGrainAnim(allGrains[i], i);
+    }window.CP.exitedLoop(0);
+  }
+  
+  function randomBetween(min, max)
+  {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  
+  function pauseGrains() {
+  
+    grainIsPaused = true;
+    for (var i = 0; i < allGrains.length; i++) {if (window.CP.shouldStopExecution(1)) break;
+      TweenMax.set(allGrains[i], {
+        alpha: 0,
+        attr: {
+          x: 0,
+          y: 0 } });
+  
+  
+    }window.CP.exitedLoop(1);}
+  
+  function restartGrains() {
+  
+    for (var i = 0; i < allGrains.length; i++) {if (window.CP.shouldStopExecution(2)) break;
+      TweenMax.set(allGrains[i], {
+        alpha: 1,
+        x: 307,
+        y: 465 });
+  
+    }window.CP.exitedLoop(2);
+  }
+  
+  //.addCallback(createGrains)
+  //# sourceURL=pen.js
+      </script>
+  
+    
+  
+  
+  
+  
+   
+  </body>
+</html>
